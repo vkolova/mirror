@@ -1,0 +1,19 @@
+@import '~owfont/css/owfont-regular.min.css';
+
+.weather-module {
+    top: 0;
+    right: 0;
+
+    .main-info {
+        display: flex;
+        align-items: center;
+
+        font-size: 5em;
+        line-height: 1em;
+    }
+
+    .description {
+        font-size: 1.5em;
+    }
+
+}

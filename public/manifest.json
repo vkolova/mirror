@@ -1,0 +1,8 @@
+{
+  "short_name": "Mirror",
+  "name": "Mirror",
+  "background_color": "#000",
+  "start_url": "/mirror2/",
+  "display": "fullscreen",
+  "orientation": "landscape"
+}

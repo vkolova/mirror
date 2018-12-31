@@ -16,6 +16,7 @@
     "mobx": "^3.2.2",
     "mobx-react": "^4.2.2",
     "npm": "^5.0.3",
+    "owfont": "git+https://github.com/websygen/owfont.git",
     "particlesjs": "^2.2.3",
     "react": "^16.0.0",
     "react-dom": "^16.0.0"

@@ -7,7 +7,13 @@ const jsUcfirst = string => {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-const isItDay = (sunrise, sunset) => {}
+const isItDay = (sunrise, sunset) => {
+    const now = new Date().getTime() / 1000
+
+    return now > sunrise && now < sunset
+        ? 'd'
+        : 'n'
+}
 
 export default class Weather extends React.Component {
     state = {
@@ -32,7 +38,6 @@ export default class Weather extends React.Component {
             }
         })
         .then(response => {
-            console.log(response);
             this.setState({ data: response.data })
         })
         .catch(error => {
@@ -48,14 +53,15 @@ export default class Weather extends React.Component {
         const weather = data.weather[0]
         const { description } = weather
         const { sunrise, sunset } = data.sys
+        const d = isItDay(sunrise, sunset)
         const temp = data.main.temp
 
         return <div className='module weather-module'>
-            <div className='main-info'>
+            <h1 className='main-info'>
                 <span className='temperature'>{ `${2}°C` }</span>
-                <i className={`owf owf-${icon}-n`}></i>
-            </div>
-            <span className='description'>{ jsUcfirst(description) }</span>
+                <i className={`owf owf-${icon}-${d}`}></i>
+            </h1>
+            <h2 className='description'>{ jsUcfirst(description) }</h2>
         </div>
     }
 }

@@ -34,12 +34,12 @@ export default class Clock extends React.Component {
         return (
             <div className='module clock-module'>
                 <span className='clock'>
-                    <span className='time'>
+                    <h1 className='time'>
                         { `${h % 12 < 10 ? '0' + h % 12 : h % 12}:${m < 10 ? '0' + m : m}` }
-                    </span>
+                    </h1>
                     <span className='part-of-day'>{ h < 12 ? 'AM' : 'PM' }</span>
                 </span>
-                <div className='date'>{ `${day}, ${month} ${date}` }</div>
+                <h2 className='date'>{ `${day}, ${month} ${date}` }</h2>
                 {/*
                 { `${t.getDOY()} / 365` }
                 */}

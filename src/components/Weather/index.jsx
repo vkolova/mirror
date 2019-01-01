@@ -58,7 +58,7 @@ export default class Weather extends React.Component {
 
         return <div className='module weather-module'>
             <h1 className='main-info'>
-                <span className='temperature'>{ `${2}°C` }</span>
+                <span className='temperature'>{ `${temp}°C` }</span>
                 <i className={`owf owf-${icon}-${d}`}></i>
             </h1>
             <h2 className='description'>{ jsUcfirst(description) }</h2>

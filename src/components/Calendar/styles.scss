@@ -1,0 +1,32 @@
+.calendar-module {
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    font-size: 1.3em;
+
+    .r-weekdays {
+        font-weight: bold;
+    }
+
+    .r-row {
+        display: block;
+    }
+
+    .r-cell {
+        height: 1.5em;
+        width: 1.5em;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .r-today {
+        background: #fff;
+        color: #000;
+        font-weight: bold;
+    }
+
+    .r-head {
+        font-weight: bold;
+    }
+}
